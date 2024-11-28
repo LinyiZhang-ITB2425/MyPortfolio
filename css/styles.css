@@ -40,6 +40,16 @@ header h1 i {
     font-size: 1.2em;
 }
 
+.perfil-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    border: 2.5px solid white;
+    box-shadow: 0 0 3px 1.5px rgba(255, 255, 255, 0.7); 
+}
+
 /* Navegación */
 nav {
     background-color: #ffffff;
