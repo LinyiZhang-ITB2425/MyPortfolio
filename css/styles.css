@@ -136,7 +136,7 @@ main {
 .project-item a {
     color: #4A90E2;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 600;
 }
 
@@ -147,7 +147,7 @@ main {
 
 /* Ajuste del texto */
 .about-me p, .projects p {
-    font-size: em;
+    font-size: 1em;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6;
