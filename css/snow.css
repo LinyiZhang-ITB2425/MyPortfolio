@@ -1,0 +1,28 @@
+/* Estilo para el cuerpo y el fondo */
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+  }
+  
+  /* Estilo para los copos de nieve */
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    color: #fff;
+    font-size: 24px;
+    font-family: Arial;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    user-select: none;
+    animation-name: snowfall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  /* Animación de caída */
+  @keyframes snowfall {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+  }
+  
