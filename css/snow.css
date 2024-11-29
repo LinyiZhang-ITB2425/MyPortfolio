@@ -1,28 +1,59 @@
 /* Estilo para el cuerpo y el fondo */
 body, html {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-    background: #000;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Estilo para los copos de nieve */
+.snowflake {
+  position: absolute;
+  color: #fff;
+  font-size: 24px;
+  font-family: Arial;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  user-select: none;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Animación de caída desde la parte superior */
+@keyframes snowfall-vertical {
+  0% { 
+      transform: translateY(0); 
+      opacity: 1;
   }
-  
-  /* Estilo para los copos de nieve */
-  .snowflake {
-    position: absolute;
-    top: -10px;
-    color: #fff;
-    font-size: 24px;
-    font-family: Arial;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    user-select: none;
-    animation-name: snowfall;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+  100% { 
+      transform: translateY(150vh); /* Aumenté la distancia de caída */
+      opacity: 0; /* Se desvanece */
   }
-  
-  /* Animación de caída */
-  @keyframes snowfall {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Animación de caída diagonal desde la esquina derecha */
+@keyframes snowfall-diagonal {
+  0% { 
+      transform: translateY(0) translateX(0); /* Empieza desde la esquina derecha */
+      opacity: 1;
   }
-  
+  100% { 
+      transform: translateY(150vh) translateX(-150vw); /* Caída diagonal más lejos */
+      opacity: 0; /* Se desvanece */
+  }
+}
+
+/* Animación de caída diagonal desde la esquina izquierda hacia la esquina inferior derecha */
+@keyframes snowfall-diagonal-left {
+  0% { 
+      transform: translateY(0) translateX(0); /* Empieza desde la esquina izquierda */
+      opacity: 1;
+  }
+  100% { 
+      transform: translateY(150vh) translateX(150vw); /* Caída diagonal más lejos */
+      opacity: 0; /* Se desvanece */
+  }
+}
+
+.snowflake[data-type="vertical"] {
+  animation-duration: 4s !important; /* Duración más rápida para los copos verticales */
+}
