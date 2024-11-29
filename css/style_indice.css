@@ -96,6 +96,7 @@ main {
 
 .about-me {
     flex-basis: 60%;
+    transition: trasform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-me h1, p {
@@ -125,6 +126,10 @@ main {
 .about-me a:hover {
     text-decoration: underline;
     color: #50E3C2;
+}
+.about-me:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.2);
 }
 
 .formato_texto {
