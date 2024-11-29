@@ -1,4 +1,4 @@
-// Función para crear un copo de nieve
+// para crear un copo de nieve
 function createSnowflake() {
   const snowflake = document.createElement('div');
   snowflake.classList.add('snowflake');
@@ -16,14 +16,14 @@ function createSnowflake() {
 
   // Elegir aleatoriamente la animación
   const randomAnim = Math.random();
-  if (randomAnim < 0.33) {
-      // 33% de probabilidad para caer verticalmente
+  if (randomAnim < 0.35) {
+      
       snowflake.style.animationName = 'snowfall-vertical';
   } else if (randomAnim < 0.66) {
-      // 33% de probabilidad para caer diagonalmente desde la esquina derecha
+      
       snowflake.style.animationName = 'snowfall-diagonal';
   } else {
-      // 34% de probabilidad para caer diagonalmente desde la esquina izquierda
+      
       snowflake.style.animationName = 'snowfall-diagonal-left';
   }
 
@@ -35,6 +35,7 @@ function createSnowflake() {
 
   document.body.appendChild(snowflake);
 }
+
 
 // Generar varios copos de nieve
 function generateSnowflakes(count) {

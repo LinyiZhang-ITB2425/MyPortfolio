@@ -25,35 +25,37 @@ body, html {
       opacity: 1;
   }
   100% { 
-      transform: translateY(150vh); /* Aumenté la distancia de caída */
-      opacity: 0; /* Se desvanece */
+      transform: translateY(150vh); 
+      opacity: 0; 
   }
+}
+
+.snowflake[data-type="vertical"] {
+  animation-duration: 4s !important;
 }
 
 /* Animación de caída diagonal desde la esquina derecha */
 @keyframes snowfall-diagonal {
   0% { 
-      transform: translateY(0) translateX(0); /* Empieza desde la esquina derecha */
+      transform: translateY(0) translateX(0); 
       opacity: 1;
   }
   100% { 
-      transform: translateY(150vh) translateX(-150vw); /* Caída diagonal más lejos */
-      opacity: 0; /* Se desvanece */
+      transform: translateY(150vh) translateX(-150vw);
+      opacity: 0; 
   }
 }
 
 /* Animación de caída diagonal desde la esquina izquierda hacia la esquina inferior derecha */
 @keyframes snowfall-diagonal-left {
   0% { 
-      transform: translateY(0) translateX(0); /* Empieza desde la esquina izquierda */
+      transform: translateY(0) translateX(0); 
       opacity: 1;
   }
   100% { 
-      transform: translateY(150vh) translateX(150vw); /* Caída diagonal más lejos */
-      opacity: 0; /* Se desvanece */
+      transform: translateY(150vh) translateX(150vw); 
+      opacity: 0; 
   }
 }
 
-.snowflake[data-type="vertical"] {
-  animation-duration: 4s !important; /* Duración más rápida para los copos verticales */
-}
+
